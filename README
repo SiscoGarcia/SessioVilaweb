@@ -108,3 +108,31 @@ Seleccionem el GitHub com al nostre servidor; entrem el nostre nom d'usuari i el
 
 Només cal prémer «Sincronitza» per començar a sincronitzar!
 
+
+############################################################################################################################################################
+
+Altres aspectes interessants (traducció «més o menys literal» del tutorial que hi ha a http://www.sparkleshare.org
+
+############		Com afegir més col·laboradors al Github		#################
+
+El col·laborador haurà d'aconseguir un compte i afegir seu o el seu SSH Clau Pública com s'ha descrit abans, però poden obvia la creació del dipòsit. Una vegada fet, fàcilment es pot afegir la persona a través de la interfície web de Github.
+
+En Github, cal anar al «Dashboard» i seleccionar el dipòsit desitjat a l'apartat «Your Repositories». Llavors cal prémer «Admin», després «Col·laboradors». Cal buscar el nom d'usuari del col·laborador per escriure'l a interior de la caixeta d'entrada de text i prémer «Afegeix» per afegir la persona.
+
+Fet! Ara cada usuari que forma part de l'equip ja pot sincronitzar amb la carpeta.
+
+############		Com compartir fitxers		#################
+
+1. Com es poden afegir fitxers?
+
+Només cal posar els fitxers en una de les carpetes del projecte SparkleShare. Pot fer-se això arrossegant fitxers a sobre o desant-les directament des d'una aplicació. L'SparkleShare notarà els canvis. No cal cap més feina manual de sincronització!
+
+2. Com compartir els fitxers amb altres?
+
+No només és tot en l'SparkleShare sincronitzat al nostre servidor, l'SparkleShare també ho fa automàticament amb tots altres clients que es van connectar amb ell. Una altra vegada, cap feina extra!
+
+3. En cas d'equivocació, com revertir els canvis?
+
+Fent clic amb el botó dret l'arxiu afectat. Hi haurà una entrada del menú anomenada «Aconseguir Versió Anterior». Des d'allà es pot seleccionar una versió anterior de l'arxiu que es vol comprovar. L'SparkleShare crearà una còpia d'aquest fitxer en la mateixa carpeta.
+
+
