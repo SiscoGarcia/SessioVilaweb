@@ -10,6 +10,8 @@ Aquesta idea original és modificada i permet fer servir el compte de Git* com u
 
 Així, en parlar de l'SparkleShare, i mentre no hi hagi la possibilitat d'emprar un servidor local, cal parlar del propi SparkleShare, i també de l'eina col·laborativa que triem, sigui el Gitorius o bé el GitHub.
 
+
+
 ############		Instal·lació de l'eina SparkleShare	#################
 
 El primer que hem de fer és baixar el paquet de http://www.sparkleshare.org (https://github.com/downloads/hbons/SparkleShare/sparkleshare-0.2-beta1.tar.gz). Des del terminal és senzill fent:
@@ -36,7 +38,22 @@ i com que tenim satifetes les dependències només cal compilar el paquet amb le
 
 Amb això ja tenim SparkleShare instal·lat, ara caldrà configurar-lo: el primer que cal fer és obrir-lo (Aplicacions > Internet > SparkleShare) i omplir les dades que se'ns demana (usuari i correu-e); amb la qual cosa l'SparkleShare crea un parell de claus a ~.config/sparkleshare (aquestes claus ens serviran per validar-nos al Git*).
 
-############		Creació d'un compte de Git*	#################
+
+La idea a l'hora de treballar amb l'SparkleShare és senzilla, només hem de fer les següents passes:
+
+1.- crear un compte de Gitorius (http://gitorius.org) o de github (http://github.com)
+
+2.- crear un parell de claus PGP i exportar-la al git* (prèviament cal haver-la publicat i sincronitzat a un servidor de claus)
+
+3.- crear un dipòsit al gitorius o al github i després enllaçar la carpeta que volem compartir perquè estigui a l'abast de tothom
+
+4.- configurar l'sparkleshare perquè hi apunti a aquesta carpeta
+
+5.- sincronitzar la del gitorius o del github amb la de l'ordinador
+
+
+
+############		Creació d'un compte de GitHub	#################
 
 1.- Descarregar i instal·lar el Git
 
