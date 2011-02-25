@@ -111,7 +111,7 @@ Només cal prémer «Sincronitza» per començar a sincronitzar!
 
 ############################################################################################################################################################
 
-Altres aspectes interessants (traducció «més o menys literal» del tutorial que hi ha a http://www.sparkleshare.org
+Altres aspectes interessants (traducció «més o menys literal» del tutorial que hi ha a http://www.sparkleshare.org)
 
 ############		Com afegir més col·laboradors al Github		#################
 
@@ -134,5 +134,26 @@ No només és tot en l'SparkleShare sincronitzat al nostre servidor, l'SparkleSh
 3. En cas d'equivocació, com revertir els canvis?
 
 Fent clic amb el botó dret l'arxiu afectat. Hi haurà una entrada del menú anomenada «Aconseguir Versió Anterior». Des d'allà es pot seleccionar una versió anterior de l'arxiu que es vol comprovar. L'SparkleShare crearà una còpia d'aquest fitxer en la mateixa carpeta.
+
+
+############		Com treballar amb Gitorius		#################
+
+Evidentment, el primer és crear un compte de Gitorius (http://gitorius.org).
+
+Des del panell de control (Dashboard) punxem a «Create a new project», omlplim els camps necessaris i se'ns demana de crear un nou dipòsit. Aquest nom és el que anomenarem «Folder name».
+
+Ara toca pujar la clau ssh pública al Gitorius per autenticar-nos. l'Sparkleshare ens n'ha creat una quan hem emplenat la pantalla «First Run Screen» (s'hi troba a la carpeta arrel de l'usuari, a la subcarpeta «.config/sparkleshare/» i és una cosa semblant a «sparkleshare.elteunom@server.com.key.pub»; cal copiar el contingut d'aquest fitxer, tornar al tauler de control, punxar «Manage SSH Keys» i «Add SSH Key», hi enganxem el contingut que hem copiat abans i desem («Save»).
+
+Ara ja podem dir-li a l'SparkleShare que s'hi sincronitzi amb aquesta carpeta. Punxem la icona de notificació de l'SparkleShare i seleccionem «Sync Remote Folder...», triem «Gitorius» com al nostre servidor i introduim els noms del projecte i de la carpeta a «Folder Name». Només ens queda pitjar «Sync» per començar a sincronitzar!
+
+(en el cas que ens ocupa la carpeta es troba a «seminaristac/seminaristac»)
+
+Es poden crear més usuaris (col·laboradors), equips, etc. però això ja ho tractarem en un altre moment.
+
+Cada vegada que fem alguna modificació (sobre els documents que hi tinguem o bé hi afegim alguna cosa nova) caldrà tornar a sincronitzar-nos (Premem la icona de notificació de l'SparkleShare i seleccionem «Sync Remote Folder...», triem «Gitorius» com al nostre servidor i introduim els noms del projecte i de la carpeta a «Folder Name». Només ens queda prémer «Sync» per començar a sincronitzar!), mentre que a la resta d'ordinadors que hi estan sincronitzats apareixerà una notificació d'aquesta modificació... és automàgic! 
+
+Cal recordar que és una aplicació que encara es troba en fase beta, però té una sèrie de possibilitats de compartició i de possibilitat de control sobre els fitxers (en poder tenir les dades en un servidor propi) que li donen un valor afegit no igualat per les altres aplicacions semblants.
+
+
 
 
