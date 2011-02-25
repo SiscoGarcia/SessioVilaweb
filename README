@@ -114,7 +114,7 @@ La idea a l'hora de treballar amb l'SparkleShare és senzilla, només hem de fer
 
 ############		Sincronització del Git* i SparkleShare	#################
 
-Hem de copiar el contingut de la clau pública, que serà semblant a sparkleshare.yourname@server.com.key.pub (però amb el nostre correu electrònic enlloc de «yourname@server.com.key» al mig del nom de la clau) a l'apartat de les claus (https://github.com/account) del web; l'enganxem i li donem un nom (com abans, de fet el pas anterior pot obviar-se si només volem fer servir el compte de GitHub amb l'SparkleShare). Hem de prémer el botó «Add key» i ja podem sincronitzar l'SparkleShare amb el GitHub.
+Hem de copiar el contingut de la clau pública, que serà semblant a sparkleshare.yourname@server.com.key.pub (però amb el nostre correu electrònic enlloc de «yourname@server.com.key» al mig del nom de la clau) a l'apartat de les claus (https://github.com/account) del web; l'enganxem i li donem un nom (com abans, de fet el pas anterior sobre la creació del parell de claus de confiança pot obviar-se si només volem fer servir el compte de GitHub amb l'SparkleShare). Hem de prémer el botó «Add key» i ja podem sincronitzar l'SparkleShare amb el GitHub.
 
 Sincronitzem l'SparkleShare amb aquesta carpeta del GitHub:
 
