@@ -14,9 +14,7 @@ Així, en parlar de l'SparkleShare, i mentre no hi hagi la possibilitat d'emprar
 
 ############		Instal·lació de l'eina SparkleShare	#################
 
-El primer que hem de fer és baixar el paquet de http://www.sparkleshare.org (https://github.com/downloads/hbons/SparkleShare/sparkleshare-0.2-beta1.tar.gz). Des del terminal és senzill fent:
-
-~$ wget https://github.com/downloads/hbons/SparkleShare/sparkleshare-0.2-beta1.tar.gz
+El primer que hem de fer és baixar el paquet de http://www.sparkleshare.org (https://github.com/downloads/hbons/SparkleShare/sparkleshare-0.2-beta1.tar.gz).
 
 Com que està fet amb C, cal satisfer un seguit de dependències, que als sistemes basats en debian es resolen amb:
 
