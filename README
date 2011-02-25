@@ -126,7 +126,7 @@ Seleccionem el GitHub com al nostre servidor; entrem el nostre nom d'usuari i el
 Només cal prémer «Sincronitza» per començar a sincronitzar!
 
 
-#######################################################################################################################
+######################################################################################################################
 
 Altres aspectes interessants (traducció «més o menys literal» del tutorial que hi ha a http://www.sparkleshare.org)
 
@@ -163,7 +163,7 @@ Ara toca pujar la clau ssh pública al Gitorius per autenticar-nos. l'Sparklesha
 
 Ara ja podem dir-li a l'SparkleShare que s'hi sincronitzi amb aquesta carpeta. Punxem la icona de notificació de l'SparkleShare i seleccionem «Sync Remote Folder...», triem «Gitorius» com al nostre servidor i introduim els noms del projecte i de la carpeta a «Folder Name». Només ens queda pitjar «Sync» per començar a sincronitzar!
 
-(en el cas que ens ocupa la carpeta es troba a «seminaristac/seminaristac»)
+(en el cas que ens ocupa la carpeta es troba a «SiscoGarcia/SessioVilaweb»)
 
 Es poden crear més usuaris (col·laboradors), equips, etc. però això ja ho tractarem en un altre moment.
 
