@@ -38,6 +38,65 @@ Amb això ja tenim SparkleShare instal·lat, ara caldrà configurar-lo: el prime
 
 ############		Creació d'un compte de Git*	#################
 
+1.- Descarregar i instal·lar el Git
+
+	$ sudo apt-get install git-core git-gui git-doc
+
+		Els següents passos es poden obviar i passar directament a la creació d'un parell de claus:	
+		$ cd ~/.ssh
+		$ ls
+		$ mkdir key_backup
+		$ cp id_rsa* key_backup
+		$ ls
+		$ nano known_hosts
+
+	Creació d'un parell de claus (si només volem fer servir SparkleShare també podem obviar aquest pas i podem fer servir les claus generades abans):
+	$ ssh-keygen -t rsa -C "elteunom@domini.tal"
+	$ ls
+
+	Còpia de les claus al compte de GitHub:
+	$ sudo apt-get install xclip
+	$ cat ~/.ssh/id_rsa.pub | xclip -sel clip
+
+	Anem al web i a l'apartat de les claus (https://github.com/account) l'enganxem i li donem un nom.
+
+	Ens hi connectem per ssh i hi afegim els fitxers que vulguem compartir:
+	$ ssh git@github.com
+	$ git add /ruta/fins/a/SessioVilaweb.txt 
+
+	Podem comprovar l'estat del nostre compte:
+	$ git status -s
+
+
+2.- Tot seguit configurar-lo:
+
+	git config --global user.name "Your Name"
+	git config --global user.email elteunom@domini.tal
+        
+
+3.- Els passos següents són:
+
+	Crear un directori on posar-hi algun fitxer (README) que vulguem pujar (push) al nostre compte de github i crear així el primer dipòsit:
+
+	mkdir SessioVilaweb
+	cd SessioVilaweb
+	git init
+	touch README
+	git add README
+	git commit -m 'first commit'
+	git remote add origin git@github.com:SiscoGarcia/SessioVilaweb.git
+	git push origin master
+      
+	Quan ja existeix un dipòsit, el que podem fer és pujar-lo i modificar-lo de la següent manera:
+
+	cd existing_git_repo
+	git remote add origin git@github.com:SiscoGarcia/SessioVilaweb.git
+	git push origin master
+      
+	Després podem anar al directori remot i veure què hi ha i modificar/configurar el que convingui:
+
+	https://github.com/SiscoGarcia/SessioVilaweb
+
 ############		Sincronització del Git* i SparkleShare	#################
 
 Hem de copiar el contingut de la clau pública, que serà semblant a sparkleshare.yourname@server.com.key.pub (però amb el nostre correu electrònic enlloc de «yourname@server.com.key» al mig del nom de la clau) a l'apartat de les claus (https://github.com/account) del web; l'enganxem i li donem un nom (com abans, de fet el pas anterior pot obviar-se si només volem fer servir el compte de GitHub amb l'SparkleShare). Hem de prémer el botó «Add key» i ja podem sincronitzar l'SparkleShare amb el GitHub.
@@ -48,3 +107,4 @@ Premem a la icona de notificació de l'SparkleShare i seleccionem «sincronitzar
 Seleccionem el GitHub com al nostre servidor; entrem el nostre nom d'usuari i el nom de la carpeta a l'entrada «Nom de la Carpeta»; en el nostre cas és «Usuari/Carpeta» concretament «SiscoGarcia/SessioVilaweb».
 
 Només cal prémer «Sincronitza» per començar a sincronitzar!
+
