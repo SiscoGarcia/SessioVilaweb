@@ -1,0 +1,50 @@
+############		Introducció a l'eina SparkleShare	#################
+
+L'SparkleShare és una eina de sincronització i col·laborativa molt transparent per l'usuari, que no nota que hi és. Es troba en una versió molt incipient (beta) però està previst que es pugui disposar d'un servidor en local, de manera que l'usuari pugui tenir un control total de les dades... cal recordar que està feta amb programari lliure! També manté un registre dels canvis fets als fitxers (via web, de moment), amb la qual cosa si ens equivoquem sempre podem «revertir» els canvis, és a dir, tornar enrere. 
+
+L'SparkleShare és una aplicació que s'aprofita d'eines de comparació de versions en treballs col·laboratius, com és el cas del Gitorius (http://www.gitorious.org/) i del GitHub (http://www.github.com/). Per la qual cosa, i mentre no hi hagi la possibilitat d'instal·lar un servidor propi d'SparkleShare cal tenir obert un compte en alguna d'aquestes aplicacions.
+
+La manera de funcionar de l'SparkleShare és comparant la versió existent al servidor (el nostre compte de Git*) amb la que hi pugem, conservant sempre l'última modificada, i sincronitzant els canvis que fem tant al servidor com a la carpeta SparkleShare local, de manera que sempre tenim actualitzada l'última versió del document de què es tracti.
+
+Aquesta idea original és modificada i permet fer servir el compte de Git* com un dipòsit de fitxers, característica comuna amb altres aplicacions; el que té de particular l'SparkleShare és que és una aplicació feta amb programari lliure i que aprofita eines també lliures, les quals permeten obrir comptes de forma gratuïta sempre que es comparteixi lliurement allò que s'hi penja. Aquests comptes són ilimitats, mentre que si volem aprofitar-ho per usos no lliures té un cost econòmic.
+
+Així, en parlar de l'SparkleShare, i mentre no hi hagi la possibilitat d'emprar un servidor local, cal parlar del propi SparkleShare, i també de l'eina col·laborativa que triem, sigui el Gitorius o bé el GitHub.
+
+############		Instal·lació de l'eina SparkleShare	#################
+
+El primer que hem de fer és baixar el paquet de http://www.sparkleshare.org (https://github.com/downloads/hbons/SparkleShare/sparkleshare-0.2-beta1.tar.gz). Des del terminal és senzill fent:
+
+~$ wget https://github.com/downloads/hbons/SparkleShare/sparkleshare-0.2-beta1.tar.gz
+
+Com que està fet amb C, cal satisfer un seguit de dependències, que als sistemes basats en debian es resolen amb:
+
+~$ sudo apt-get install gtk-sharp2 monodevelop mono-devel libndesk-dbus1.0-cil-dev libndesk-dbus-glib1.0-cil-dev python-nautilus git-core intltool gvfs gvfs-bin python-gtk2-dev openssh-client
+
+ara caldrà descomprimir el paquet amb:
+
+~$ tar -zxvf sparkleshare-0.2-beta1.tar.gz 
+
+ens situem a dintre del directori
+
+~$ cd sparkleshare-0.2-beta1
+
+i com que tenim satifetes les dependències només cal compilar el paquet amb les instruccions típiques:
+
+~$ ./configure
+~$ make
+~$ sudo make install
+
+Amb això ja tenim SparkleShare instal·lat, ara caldrà configurar-lo: el primer que cal fer és obrir-lo (Aplicacions > Internet > SparkleShare) i omplir les dades que se'ns demana (usuari i correu-e); amb la qual cosa l'SparkleShare crea un parell de claus a ~.config/sparkleshare (aquestes claus ens serviran per validar-nos al Git*).
+
+############		Creació d'un compte de Git*	#################
+
+############		Sincronització del Git* i SparkleShare	#################
+
+Hem de copiar el contingut de la clau pública, que serà semblant a sparkleshare.yourname@server.com.key.pub (però amb el nostre correu electrònic enlloc de «yourname@server.com.key» al mig del nom de la clau) a l'apartat de les claus (https://github.com/account) del web; l'enganxem i li donem un nom (com abans, de fet el pas anterior pot obviar-se si només volem fer servir el compte de GitHub amb l'SparkleShare). Hem de prémer el botó «Add key» i ja podem sincronitzar l'SparkleShare amb el GitHub.
+
+Sincronitzem l'SparkleShare amb aquesta carpeta del GitHub:
+
+Premem a la icona de notificació de l'SparkleShare i seleccionem «sincronitzar amb la carpeta remota».
+Seleccionem el GitHub com al nostre servidor; entrem el nostre nom d'usuari i el nom de la carpeta a l'entrada «Nom de la Carpeta»; en el nostre cas és «Usuari/Carpeta» concretament «SiscoGarcia/SessioVilaweb».
+
+Només cal prémer «Sincronitza» per començar a sincronitzar!
